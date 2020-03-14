@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Button x:Name="MyButton" Content="Hello">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Green" />
+                </Style>
+            </Button.Style>
+     
+        </Button>
     </Grid>
 </Window>

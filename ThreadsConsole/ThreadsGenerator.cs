@@ -59,7 +59,8 @@ namespace ThreadsConsole
             var thread = new Thread(() => {
                 Console.WriteLine("Start download...");
                 var webClient = new HttpClient();
-                var html = webClient.GetStringAsync("http://derldalfor.co.uk/");
+                var html = webClient.GetStringAsync("http://derldalfor.co.uk/").Result;
+                Console.WriteLine(html);
                 Console.WriteLine("Done downloading");
             });
 

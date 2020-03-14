@@ -33,7 +33,8 @@ namespace ThreadsConsole
                 await Task.Delay(time);
                 Console.WriteLine("Start download...");
                 var webClient = new HttpClient();
-                var html = webClient.GetStringAsync("http://derldalfor.co.uk/");
+                var html = await webClient.GetStringAsync("http://derldalfor.co.uk/");
+                Console.WriteLine(html);
                 Console.WriteLine("Done downloading");
             });
         }
@@ -45,7 +46,8 @@ namespace ThreadsConsole
                 await Task.Delay(time);
                 Console.WriteLine("Start download...");
                 var webClient = new HttpClient();
-                var html = webClient.GetStringAsync("http://derldalfor.co.uk/");
+                var html = await webClient.GetStringAsync("http://derldalfor.co.uk/");
+                Console.WriteLine(html);
                 Console.WriteLine("Done downloading");
             });
         }
